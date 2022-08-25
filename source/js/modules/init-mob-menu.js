@@ -10,6 +10,7 @@ const initMobMenu = () => {
   mainOpener.addEventListener("click", () => {
     stand.classList.add("stand--open");
     html.classList.add("html__hiddden");
+    mainWrapper.classList.add("open");
     stand.addEventListener("click", () => {
       stand.classList.remove("stand--open");
       mainWrapper.classList.remove("open");
@@ -19,7 +20,6 @@ const initMobMenu = () => {
         mainWrapper.classList.remove("open");
       });
     });
-    mainWrapper.classList.add("open");
   });
   mainClose.addEventListener("click", () => {
     stand.classList.remove("stand--open");

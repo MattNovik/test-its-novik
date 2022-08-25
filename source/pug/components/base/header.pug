@@ -2,16 +2,24 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "products.html",
+        text: "Продукты"
       },
       {
-        href: "#",
-        text: "Страница 2"
+        href: "colors.html",
+        text: "цвета"
       },
       {
-        href: "#",
-        text: "Страница 3"
+        href: "encourage.html",
+        text: "вдохновение"
+      },
+      {
+        href: "advices.html",
+        text: "советы"
+      },
+      {
+        href: "map.html",
+        text: "найти магазин"
       },
     ]
 
@@ -19,13 +27,17 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        .header__logo
+          +picture('content', 'logo', 'png', 131, 26, 'its.agency logo')
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +picture('content', 'logo', 'png', 131, 26, 'its.agency logo')
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+          +icon("icon-burger", 24, 12)
         .main-nav__wrapper
+          button.main-nav__close(type="button" aria-label="закрыть меню")
+            +icon("icon-close", 15,15)
           ul.main-nav__list
             each link in headerLinks
               - const activeState = currentUrl === link.href
@@ -34,3 +46,19 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active=link.text
                 else
                   a.main-nav__link(href=link.href)=link.text
+      .header__tel-wrapper
+        a.header__tel(href="tel:+74952217769") +7 (495) 221-77-69
+        button.header__tel-button(type="button") Заказать звонок
+      .profile-icons
+        ul.profile-icons__list
+          li.profile-icons__item
+            button.profile-icons__button.search(type="button" aria-label="открыть поиск")
+              +icon("icon-search",22,22)
+          li.profile-icons__item
+            button.profile-icons__button.profile(type="button" aria-label="открыть профиль")
+              +icon("icon-profile",22,22)
+          li.profile-icons__item
+            button.profile-icons__button.favorite(type="button" aria-label="открыть любимые")
+              +icon("icon-heart",22,22)
+      button.header__busket-opener(type="button" aria-label="открыть меню")
+        span.header__busket-number 4

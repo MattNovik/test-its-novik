@@ -1,0 +1,36 @@
+mixin slider()
+  section.slider
+    +breadcrumbs(breadcrumbs)
+    .swiper-block
+      .swiper-wrapper
+        .swiper-slide
+          +picture('slides', 'main-slider', 'jpg', 100, 100, 'first-slide').slider__picture
+          .slider__info-wrapper
+            h1.slider__name Краски
+            p.slider__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+        .swiper-slide
+          +picture('slides', 'main-slider', 'jpg', 100, 100, 'first-slide').slider__picture
+          .slider__info-wrapper
+            h1.slider__name Краски
+            p.slider__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+        .swiper-slide
+          +picture('slides', 'main-slider', 'jpg', 100, 100, 'first-slide').slider__picture
+          .slider__info-wrapper
+            h1.slider__name Краски
+            p.slider__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+        .swiper-slide
+          +picture('slides', 'main-slider', 'jpg', 100, 100, 'first-slide').slider__picture
+          .slider__info-wrapper
+            h1.slider__name Краски
+            p.slider__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+        .swiper-slide
+          +picture('slides', 'main-slider', 'jpg', 100, 100, 'first-slide').slider__picture
+          .slider__info-wrapper
+            h1.slider__name Краски
+            p.slider__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+
+    .swiper-button-prev
+      +icon("icon-arrow", 20, 40)
+    .swiper-button-next
+      +icon("icon-arrow", 20, 54)
+    .swiper-pagination

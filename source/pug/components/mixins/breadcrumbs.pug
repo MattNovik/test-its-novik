@@ -1,0 +1,9 @@
+mixin breadcrumbs(data)
+  nav.breadcrumbs&attributes(attributes)
+    ul.breadcrumbs__list
+      each link in data
+        li.breadcrumbs__item
+          if (currentPage !== link.href)
+            a.breadcrumbs__link(href=link.href)!= link.content
+          else
+            span.breadcrumbs__current(aria-current="page")!= link.content

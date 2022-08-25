@@ -1,0 +1,54 @@
+mixin busket()
+  .busket
+    button.busket__close(type="button" aria-lable="закрыть корзину")
+      +icon('icon-close',12,12)
+    h2.busket__name Корзина
+    form.busket__wrapper-list
+      .busket__wrapper-list-header
+        span.busket__products-count 4 товара
+        button.busket__clear(type="button") очистить корзину
+      ul.busket__list
+        li.busket__item
+          +picture('content', 'product-first','jpg',96,96, "first-product").busket__item-img
+          .busket__name-price
+            span.busket__product-name Краска Wallquest, Brownsone MS90102
+            span.busket__price 9600 ₽
+          .busket__counter
+            button.busket__delete(type="button" aria-label="уменьшить товар на 1")
+              +icon("icon-minus",16,16)
+            span.busket__product-count 1
+            button.busket__add(type="button" aria-label="добавить товар")
+              +icon("icon-plus",16,16)
+          button.busket__delete-item(type="button" aria-lable="удалить товар")
+            +icon('icon-close',12,12)
+        li.busket__item
+          +picture('content', 'product-first','jpg',96,96, "first-product").busket__item-img
+          .busket__name-price
+            span.busket__product-name Краска Wallquest, Brownsone MS90102
+            span.busket__price 9600 ₽
+          .busket__counter
+            button.busket__delete(type="button" aria-label="уменьшить товар на 1")
+              +icon("icon-minus",16,16)
+            span.busket__product-count 1
+            button.busket__add(type="button" aria-label="добавить товар")
+              +icon("icon-plus",16,16)
+          button.busket__delete-item(type="button" aria-lable="удалить товар")
+            +icon('icon-close',12,12)
+        li.busket__item
+          +picture('content', 'product-first','jpg',96,96, "first-product").busket__item-img
+          .busket__name-price
+            span.busket__product-name Краска Wallquest, Brownsone MS90102
+            span.busket__price 9600 ₽
+          .busket__counter
+            button.busket__delete(type="button" aria-label="уменьшить товар на 1")
+              +icon("icon-minus",16,16)
+            span.busket__product-count 1
+            button.busket__add(type="button" aria-label="добавить товар")
+              +icon("icon-plus",16,16)
+          button.busket__change-item(type="button" aria-lable="поменять товар")
+            +icon('icon-repeat',24,24)
+      .busket__wrapper-summ-buy
+        .busket__wrapper-summ
+          span.busket__summ-name Итого
+          span.busket__summ-count 14 400₽
+        button.busket__buy-button(type="submit") Оформить заказ

@@ -14,38 +14,7 @@
   &__wrapper {
 
     @include vp-1023 {
-      position: absolute;
-      top: -21px;
-      left: 0;
-      width: 50vw;
-      min-width: 375px;
-      height: 100vh;
-      background-color: $color-default-white;
-      z-index: 10;
-      padding: 30px;
-      transition: all $trans-default;
-      transform: translate(-100%,0);
-
-      &.open {
-        box-shadow: 8px 0px 11px 0px rgba(0, 0, 0, 0.35);
-        transform: translate(0,0);
-      }
-    }
-  }
-
-  &__close {
-    display: none;
-
-    @include vp-1023 {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      width: 15px;
-      height: 14px;
-      border: 0;
-      outline: 0;
-      background-color: $color-transparent;
+      display: none;
     }
   }
 
@@ -72,6 +41,10 @@
       flex-direction: column;
       row-gap: 20px;
     }
+
+    @include vp-767 {
+      margin: 50px 0 0;
+    }
   }
 
   &__link {
@@ -96,5 +69,47 @@
       outline: 0;
       background-color: $color-transparent;
     }
+  }
+}
+
+.modal--mob-menu {
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+  }
+
+  .modal__wrapper {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .modal__content {
+    width: 50vw;
+    max-width: 500px;
+    min-width: 400px;
+    height: 100vh;
+
+    @include vp-767 {
+      width: 100vw;
+      max-width: none;
+      min-width: auto;
+    }
+  }
+
+  .modal__close-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 12px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    background-color: $color-transparent;
+    outline: 0;
+    cursor: pointer;
   }
 }

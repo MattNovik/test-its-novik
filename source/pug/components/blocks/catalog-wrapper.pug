@@ -1,0 +1,39 @@
+mixin catalogWrapper()
+  .container
+    h1.catalog-page-name Краски
+    .catalog-wrapper
+      .filters
+        button.filters__open(type="button" data-open-modal="modal-mob-filter") Фильтры
+        form.filters__wrapper
+          each item in filtersData
+            +custom-toggle({
+              typeClass: item.typeClass,
+              type: item.type,
+              typeFor: item.typeFor,
+              text: item.text,
+              name: item.name,
+              value: item.value,
+              checked: item.checked
+            })
+      .catalog-header
+        span.catalog-header__products-count 412 товаров
+        button.sorts(type="button" data-open-modal="modal-sort")
+          span Сначала дорогие
+          +icon('icon-small-arrow',12,10)
+      .catalog
+        ul.catalog__list
+          each item in productsData
+            li.catalog__item
+              form.catalog__item-form
+                +picture(item.imgPath, item.imgName,item.imgType,item.imgWidth,item.imgHeight, item.imgAlt).catalog__item-img
+                p.catalog__item-name!=item.itemName
+                span.catalog__item-price #{item.itemPrice} ₽
+                button.catalog__add-item(type="submit" aria-label="добавить товар")
+                  +icon('icon-plus',22,22)
+                input(type="hidden" name="picturePath" value=item.imgPath)
+                input(type="hidden" name="pictureName" value=item.imgName)
+                input(type="hidden" name="pictureType" value=item.imgType)
+                input(type="hidden" name="pictureAlt" value=item.imgAlt)
+                input(type="hidden" name="name" value=item.itemName)
+                input(type="hidden" name="price" value=item.itemPrice)
+                input(type="hidden" name="type" value=item.type)

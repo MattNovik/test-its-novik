@@ -2,9 +2,9 @@ import { iosVhFix } from "./utils/ios-vh-fix";
 import { initModals } from "./modules/modals/init-modals";
 import { initCustomSelect } from "./modules/form/init-custom-select";
 import { initFormValidate } from "./modules/form/init-form-validate";
-import { initMobMenu } from "./modules/init-mob-menu";
 import { initSliderMain } from "./modules/init-slider";
-import { initBusket } from "./modules/init-busket";
+import { initSortBox } from "./modules/init-sort-box";
+import { initFilterSort } from "./modules/init-filter-sort";
 
 // ---------------------------------
 
@@ -20,9 +20,9 @@ window.addEventListener("DOMContentLoaded", () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener("load", () => {
-    initBusket();
+    initFilterSort();
+    initSortBox();
     initSliderMain();
-    initMobMenu();
     initModals();
     initCustomSelect();
     initFormValidate();

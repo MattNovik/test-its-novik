@@ -1,0 +1,10 @@
+mixin modal-mob-menu(settings)
+  .main-nav__mob-wrapper
+    ul.main-nav__list
+      each link in settings
+        - const activeState = currentUrl === link.href
+        li.main-nav__item
+          if(activeState)
+            span.main-nav__link.is-active=link.text
+          else
+            a.main-nav__link(href=link.href)=link.text

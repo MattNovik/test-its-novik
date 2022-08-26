@@ -4,6 +4,15 @@
   //height: 560px;
   aspect-ratio: 168 / 49;
   overflow: hidden;
+  margin: 0 0 72px;
+
+  @include vp-1023 {
+    margin: 0 0 42px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 48px;
+  }
 
   @include vp-767 {
     width: 100%;

@@ -1,16 +1,15 @@
-mixin custom-toggle(options = {})
-  - const inputLabel = options.inputLabel ? options.inputLabel : false
-  - const inputType = options.inputType ? options.inputType : "checkbox"
-  - const inputError = options.inputError ? options.inputError : false
-  - const inputId = options.inputId ? options.inputId : false
-  - const inputChecked = options.inputChecked || false
-  - const inputName = options.inputName ? options.inputName : false
-
-  .custom-toggle&attributes(attributes)
-    label
-      input(type=inputType, id=inputId, name=inputName, checked=inputChecked)
-      span.custom-toggle__icon
-      if inputLabel
-        span.custom-toggle__label!=inputLabel
-    if inputError
-      .custom-toggle__error!=inputError
+mixin custom-toggle(settings)
+  button(type="submit" class="custom-toggle custom-toggle--" + settings.typeClass)&attributes(attributes)
+    if(settings.checked)
+      input.visually-hidden(type=settings.type id=settings.typeFor name=settings.name value=settings.value checked)
+    else
+      input.visually-hidden(type=settings.type id=settings.typeFor name=settings.name value=settings.value)
+    label(for=settings.typeFor) !{settings.text}
+      if (settings.info)
+        .custom-toggle__info
+    if (settings.secondText)
+      label(for=settings.typeForSecond) !{settings.secondText}
+    if (settings.inputError)
+      .custom-toggle__error!=settings.inputError
+    if block
+      block

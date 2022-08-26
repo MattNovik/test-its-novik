@@ -51,95 +51,6 @@
 <path d="M5 7.5L8.4641 3L1.5359 3L5 7.5Z" fill="currentColor"/>
 </symbol></svg>
     </div>
-    <div class="stand"></div>
-    <div class="busket">
-      <button class="busket__close" type="button" aria-lable="закрыть корзину">
-        <svg width="12" height="12" aria-hidden="true">
-          <use xlink:href="#icon-close"></use>
-        </svg>
-      </button>
-      <h2 class="busket__name">Корзина</h2>
-      <form class="busket__wrapper-list">
-        <div class="busket__wrapper-list-header"><span class="busket__products-count">4 товара</span>
-          <button class="busket__clear" type="button">очистить корзину</button>
-        </div>
-        <ul class="busket__list">
-          <li class="busket__item">
-            <picture class="busket__item-img">
-              <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
-            </picture>
-            <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
-            <div class="busket__counter">
-              <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-minus"></use>
-                </svg>
-              </button><span class="busket__product-count">1</span>
-              <button class="busket__add" type="button" aria-label="добавить товар">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </button>
-            </div>
-            <button class="busket__delete-item" type="button" aria-lable="удалить товар">
-              <svg width="12" height="12" aria-hidden="true">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="busket__item">
-            <picture class="busket__item-img">
-              <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
-            </picture>
-            <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
-            <div class="busket__counter">
-              <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-minus"></use>
-                </svg>
-              </button><span class="busket__product-count">1</span>
-              <button class="busket__add" type="button" aria-label="добавить товар">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </button>
-            </div>
-            <button class="busket__delete-item" type="button" aria-lable="удалить товар">
-              <svg width="12" height="12" aria-hidden="true">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="busket__item">
-            <picture class="busket__item-img">
-              <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
-            </picture>
-            <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
-            <div class="busket__counter">
-              <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-minus"></use>
-                </svg>
-              </button><span class="busket__product-count">1</span>
-              <button class="busket__add" type="button" aria-label="добавить товар">
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </button>
-            </div>
-            <button class="busket__change-item" type="button" aria-lable="поменять товар">
-              <svg width="24" height="24" aria-hidden="true">
-                <use xlink:href="#icon-repeat"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-        <div class="busket__wrapper-summ-buy">
-          <div class="busket__wrapper-summ"><span class="busket__summ-name">Итого</span><span class="busket__summ-count">14 400₽</span></div>
-          <button class="busket__buy-button" type="submit">Оформить заказ</button>
-        </div>
-      </form>
-    </div>
     <div class="wrapper">
       <header class="header">
         <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную">
@@ -147,17 +58,12 @@
               <source type="image/webp" srcset="img/content/logo.webp, img/content/logo@2x.webp 2x"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="131" height="26" alt="its.agency logo">
             </picture></a>
           <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-open-modal="modal-mob-menu">
               <svg width="24" height="12" aria-hidden="true">
                 <use xlink:href="#icon-burger"></use>
               </svg>
             </button>
             <div class="main-nav__wrapper">
-              <button class="main-nav__close" type="button" aria-label="закрыть меню">
-                <svg width="15" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-close"></use>
-                </svg>
-              </button>
               <ul class="main-nav__list">
                 <li class="main-nav__item"><a class="main-nav__link" href="products.html">Продукты</a>
                 </li>
@@ -200,7 +106,7 @@
               </li>
             </ul>
           </div>
-          <button class="header__busket-opener" type="button" aria-label="открыть меню"><span class="header__busket-number">4</span></button>
+          <button class="header__busket-opener" type="button" aria-label="открыть меню" data-open-modal="modal-busket"><span class="header__busket-number">4</span></button>
         </div>
       </header>
       <main>
@@ -276,10 +182,466 @@
           </div>
           <div class="swiper-pagination"></div>
         </section>
+        <div class="container">
+          <h1 class="catalog-page-name">Краски</h1>
+          <div class="catalog-wrapper">
+            <div class="filters">
+              <button class="filters__open" type="button" data-open-modal="modal-mob-filter">Фильтры</button>
+              <form class="filters__wrapper">
+                <button class="custom-toggle custom-toggle--tab" type="submit">
+                  <input class="visually-hidden" type="checkbox" id="new" name="new" value="new">
+                  <label for="new">Новинки
+                  </label>
+                </button>
+                <button class="custom-toggle custom-toggle--tab" type="submit">
+                  <input class="visually-hidden" type="checkbox" id="have" name="have" value="have">
+                  <label for="have">Есть в наличии
+                  </label>
+                </button>
+                <button class="custom-toggle custom-toggle--tab" type="submit">
+                  <input class="visually-hidden" type="checkbox" id="cont" name="cont" value="cont">
+                  <label for="cont">Контрактные
+                  </label>
+                </button>
+                <button class="custom-toggle custom-toggle--tab" type="submit">
+                  <input class="visually-hidden" type="checkbox" id="ex" name="ex" value="ex">
+                  <label for="ex">Эксклюзивные
+                  </label>
+                </button>
+                <button class="custom-toggle custom-toggle--tab" type="submit">
+                  <input class="visually-hidden" type="checkbox" id="sale" name="sale" value="sale">
+                  <label for="sale">Распродажа
+                  </label>
+                </button>
+              </form>
+            </div>
+            <div class="catalog-header"><span class="catalog-header__products-count">412 товаров</span>
+              <button class="sorts" type="button" data-open-modal="modal-sort"><span>Сначала дорогие</span>
+                <svg width="12" height="10" aria-hidden="true">
+                  <use xlink:href="#icon-small-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="catalog">
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6250 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="6250">
+                    <input type="hidden" name="type" value="new">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">10 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="10">
+                    <input type="hidden" name="type" value="new have">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">420 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="420">
+                    <input type="hidden" name="type" value="have cont">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">624000 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="624000">
+                    <input type="hidden" name="type" value="new ex have">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">640 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="640">
+                    <input type="hidden" name="type" value="sale have">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">62340 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="62340">
+                    <input type="hidden" name="type" value="new cont">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">610 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="610">
+                    <input type="hidden" name="type" value="have cont">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">200 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="200">
+                    <input type="hidden" name="type" value="have cont sale">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">4200 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="4200">
+                    <input type="hidden" name="type" value="have cont sale">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6530 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="6530">
+                    <input type="hidden" name="type" value="new sale">
+                  </form>
+                </li>
+                <li class="catalog__item">
+                  <form class="catalog__item-form">
+                    <picture class="catalog__item-img">
+                      <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="278" height="278" alt="first-product">
+                    </picture>
+                    <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6000 ₽</span>
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                      <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                    <input type="hidden" name="picturePath" value="content">
+                    <input type="hidden" name="pictureName" value="product-first">
+                    <input type="hidden" name="pictureType" value="jpg">
+                    <input type="hidden" name="pictureAlt" value="first-product">
+                    <input type="hidden" name="name" value="Краска Wallquest, Brownsone MS90102">
+                    <input type="hidden" name="price" value="6000">
+                    <input type="hidden" name="type" value="sale">
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="container"></div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--busket modal--no-scale modal--translate" data-modal="modal-busket">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="busket">
+            <h2 class="busket__name">Корзина</h2>
+            <form class="busket__wrapper-list">
+              <div class="busket__wrapper-list-header"><span class="busket__products-count">4 товара</span>
+                <button class="busket__clear" type="button">очистить корзину</button>
+              </div>
+              <ul class="busket__list">
+                <li class="busket__item">
+                  <picture class="busket__item-img">
+                    <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
+                  </picture>
+                  <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
+                  <div class="busket__counter">
+                    <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button><span class="busket__product-count">1</span>
+                    <button class="busket__add" type="button" aria-label="добавить товар">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="busket__delete-item" type="button" aria-lable="удалить товар">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="busket__item">
+                  <picture class="busket__item-img">
+                    <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
+                  </picture>
+                  <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
+                  <div class="busket__counter">
+                    <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button><span class="busket__product-count">1</span>
+                    <button class="busket__add" type="button" aria-label="добавить товар">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="busket__delete-item" type="button" aria-lable="удалить товар">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="busket__item">
+                  <picture class="busket__item-img">
+                    <source type="image/webp" srcset="img/content/product-first.webp, img/content/product-first@2x.webp 2x"><img src="img/content/product-first.jpg" srcset="img/content/product-first@2x.jpg 2x" width="96" height="96" alt="first-product">
+                  </picture>
+                  <div class="busket__name-price"><span class="busket__product-name">Краска Wallquest, Brownsone MS90102</span><span class="busket__price">9600 ₽</span></div>
+                  <div class="busket__counter">
+                    <button class="busket__delete" type="button" aria-label="уменьшить товар на 1">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button><span class="busket__product-count">1</span>
+                    <button class="busket__add" type="button" aria-label="добавить товар">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button class="busket__change-item" type="button" aria-lable="поменять товар">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-repeat"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="busket__wrapper-summ-buy">
+                <div class="busket__wrapper-summ"><span class="busket__summ-name">Итого</span><span class="busket__summ-count">14 400₽</span></div>
+                <button class="busket__buy-button" type="submit">Оформить заказ</button>
+              </div>
+            </form>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--mob-menu modal--no-scale modal--translate" data-modal="modal-mob-menu">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="main-nav__mob-wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="products.html">Продукты</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="colors.html">цвета</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="encourage.html">вдохновение</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="advices.html">советы</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="map.html">найти магазин</a>
+              </li>
+            </ul>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--mob-filter modal--no-scale modal--translate" data-modal="modal-mob-filter">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="filter">
+            <div class="filters__wrapper">
+              <button class="custom-toggle custom-toggle--tab" type="submit">
+                <input class="visually-hidden" type="checkbox" id="new" name="new" value="new" checked>
+                <label for="new">Новинки
+                </label>
+              </button>
+              <button class="custom-toggle custom-toggle--tab" type="submit">
+                <input class="visually-hidden" type="checkbox" id="have" name="have" value="have">
+                <label for="have">Есть в наличии
+                </label>
+              </button>
+              <button class="custom-toggle custom-toggle--tab" type="submit">
+                <input class="visually-hidden" type="checkbox" id="cont" name="cont" value="cont">
+                <label for="cont">Контрактные
+                </label>
+              </button>
+              <button class="custom-toggle custom-toggle--tab" type="submit">
+                <input class="visually-hidden" type="checkbox" id="ex" name="ex" value="ex">
+                <label for="ex">Эксклюзивные
+                </label>
+              </button>
+              <button class="custom-toggle custom-toggle--tab" type="submit">
+                <input class="visually-hidden" type="checkbox" id="sale" name="sale" value="sale">
+                <label for="sale">Распродажа
+                </label>
+              </button>
+            </div>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--sort modal--no-scale modal--translate" data-modal="modal-sort">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="sort-wrapper">
+            <ul class="sort-wrapper__list">
+              <li class="sort-wrapper__item">
+                <button class="sort-wrapper__button" type="button" value="expen">Сначала дорогие</button>
+              </li>
+              <li class="sort-wrapper__item">
+                <button class="sort-wrapper__button" type="button" value="notexpen">Сначала недорогие</button>
+              </li>
+              <li class="sort-wrapper__item">
+                <button class="sort-wrapper__button" type="button" value="popular">Сначала популярные</button>
+              </li>
+              <li class="sort-wrapper__item">
+                <button class="sort-wrapper__button" type="button" value="new">Сначала новые</button>
+              </li>
+            </ul>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

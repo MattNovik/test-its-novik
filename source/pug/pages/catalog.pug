@@ -23,10 +23,43 @@ block variables
         href: "colors.html",
       },
     ]
+
+  -
+    const headerLinks = [
+      {
+        href: "products.html",
+        text: "Продукты"
+      },
+      {
+        href: "colors.html",
+        text: "цвета"
+      },
+      {
+        href: "encourage.html",
+        text: "вдохновение"
+      },
+      {
+        href: "advices.html",
+        text: "советы"
+      },
+      {
+        href: "map.html",
+        text: "найти магазин"
+      },
+    ]
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +slider()
+    +catalogWrapper()
 
 block modals
+  +modal("modal--busket modal--no-scale modal--translate")(data-modal="modal-busket")
+    +modal-busket()
+  +modal("modal--mob-menu modal--no-scale modal--translate")(data-modal="modal-mob-menu")
+    +modal-mob-menu(headerLinks)
+  +modal("modal--mob-filter modal--no-scale modal--translate")(data-modal="modal-mob-filter")
+    +modal-mob-filter()
+  +modal("modal--sort modal--no-scale modal--translate")(data-modal="modal-sort")
+    +modal-sort()

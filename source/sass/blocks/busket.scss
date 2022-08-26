@@ -1,37 +1,13 @@
 .busket {
-  position: absolute;
   display: flex;
   flex-direction: column;
   top: 0;
   right: 0;
-  width: 600px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 10;
-  padding: 40px;
-  transform: translate(100%,0);
   transition: all $trans-default;
   background-color: $color-default-white;
-
-  &.open {
-    transform: translate(0,0);
-  }
-
-  &__close {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 32px;
-    right: 40px;
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .1);
-    background-color: $color-transparent;
-    outline: 0;
-    cursor: pointer;
-  }
 
   &__name {
     margin: 0 0 94px;
@@ -40,6 +16,10 @@
     line-height: 88%;
     letter-spacing: -0.04em;
     color: $color-swamp;
+
+    @include vp-767 {
+      margin: 0 0 44px;
+    }
   }
 
   &__wrapper-list {
@@ -75,10 +55,13 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    row-gap: 12px;
   }
 
   &__item {
@@ -87,6 +70,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 13px 0 0 0;
+
+    @include vp-767 {
+      display: grid;
+      grid-template-areas:
+        'img info close'
+        'add add add';
+      row-gap: 15px;
+    }
 
     &:before {
       content: "";
@@ -108,6 +99,10 @@
       width: 100%;
       height: 100%;
     }
+
+    @include vp-767 {
+      grid-area: img;
+    }
   }
 
   &__name-price {
@@ -115,6 +110,10 @@
     flex-direction: column;
     row-gap: 16px;
     max-width: 165px;
+
+    @include vp-767 {
+      grid-area: info;
+    }
   }
 
   &__product-name {
@@ -136,6 +135,11 @@
     display: flex;
     align-items: center;
     column-gap: 21px;
+
+    @include vp-767 {
+      justify-content: center;
+      grid-area: add;
+    }
   }
 
   &__delete,
@@ -172,6 +176,10 @@
     padding: 0;
     color: $color-swamp;
     opacity: 0.2;
+
+    @include vp-767 {
+      grid-area: close;
+    }
   }
 
   &__change-item {
@@ -184,6 +192,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
   }
 
   &__wrapper-summ {
@@ -223,5 +237,46 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $color-swamp;
+    cursor: pointer;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
+
+.modal {
+  &--busket {
+    .modal__wrapper {
+      padding: 0;
+      justify-content: flex-end;
+    }
+    .modal__content {
+      width: 100vw;
+      max-width: 600px;
+      height: 100vh;
+    }
+
+    .modal__close-btn {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 32px;
+      right: 40px;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, .1);
+      background-color: $color-transparent;
+      outline: 0;
+      cursor: pointer;
+
+      @include vp-767 {
+        top: 12px;
+        right: 20px;
+      }
+    }
   }
 }

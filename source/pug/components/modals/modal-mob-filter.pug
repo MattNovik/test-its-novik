@@ -1,0 +1,48 @@
+mixin modal-mob-filter()
+  .filter
+    .filters__wrapper
+      +custom-toggle({
+        typeClass: "tab",
+        type: "checkbox",
+        typeFor: "new",
+        text: "Новинки",
+        name: "new",
+        value: "new",
+        checked: true
+      })
+      +custom-toggle({
+        typeClass: "tab",
+        type: "checkbox",
+        typeFor: "have",
+        text: "Есть в наличии",
+        name: "have",
+        value: "have",
+        checked: false
+      })
+      +custom-toggle({
+        typeClass: "tab",
+        type: "checkbox",
+        typeFor: "cont",
+        text: "Контрактные",
+        name: "cont",
+        value: "cont",
+        checked: false
+      })
+      +custom-toggle({
+        typeClass: "tab",
+        type: "checkbox",
+        typeFor: "ex",
+        text: "Эксклюзивные",
+        name: "ex",
+        value: "ex",
+        checked: false
+      })
+      +custom-toggle({
+        typeClass: "tab",
+        type: "checkbox",
+        typeFor: "sale",
+        text: "Распродажа",
+        name: "sale",
+        value: "sale",
+        checked: false
+      })

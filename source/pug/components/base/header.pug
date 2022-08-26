@@ -33,11 +33,9 @@ mixin header(headerMods, currentUrl)
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +picture('content', 'logo', 'png', 131, 26, 'its.agency logo')
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        button.main-nav__toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-open-modal="modal-mob-menu")
           +icon("icon-burger", 24, 12)
         .main-nav__wrapper
-          button.main-nav__close(type="button" aria-label="закрыть меню")
-            +icon("icon-close", 15,15)
           ul.main-nav__list
             each link in headerLinks
               - const activeState = currentUrl === link.href
@@ -60,5 +58,5 @@ mixin header(headerMods, currentUrl)
           li.profile-icons__item
             button.profile-icons__button.favorite(type="button" aria-label="открыть любимые")
               +icon("icon-heart",22,22)
-      button.header__busket-opener(type="button" aria-label="открыть меню")
+      button.header__busket-opener(type="button" aria-label="открыть меню" data-open-modal="modal-busket" )
         span.header__busket-number 4

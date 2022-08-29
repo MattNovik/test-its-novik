@@ -173,6 +173,7 @@
         'item-img item-img'
         'item-name item-name'
         'item-price item-add';
+      height: 100%;
 
         @include vp-767 {
           row-gap: 0;
@@ -199,6 +200,15 @@
       letter-spacing: 0.02em;
       color: $color-swamp;
       margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      box-orient: vertical;
 
       @include vp-767 {
         margin: 0 0 20px;

@@ -1961,6 +1961,11 @@ button,
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+.custom-toggle.custom-toggle--tab label:hover,
+.custom-toggle.custom-toggle--tab label:focus-visible {
+  color: #7BB899;
+}
+
 .custom-toggle.custom-toggle--tab label::before {
   content: "";
   position: absolute;
@@ -1993,6 +1998,11 @@ button,
 
 .custom-toggle.custom-toggle--tab input:checked + label {
   color: #000000;
+}
+
+.custom-toggle.custom-toggle--tab input:checked + label:hover,
+.custom-toggle.custom-toggle--tab input:checked + label:focus-visible {
+  color: #7BB899;
 }
 
 .custom-toggle.custom-toggle--tab input:checked + label::before {
@@ -2839,6 +2849,7 @@ button,
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-appearance: none;
+  color: #1F2020;
 }
 
 .busket__add svg {
@@ -3377,16 +3388,6 @@ button,
     opacity: 0.8;
   }
 
-  .custom-toggle.custom-toggle--tab label:hover,
-  .custom-toggle.custom-toggle--tab label:focus-visible {
-    color: #7BB899;
-  }
-
-  .custom-toggle.custom-toggle--tab input:checked + label:hover,
-  .custom-toggle.custom-toggle--tab input:checked + label:focus-visible {
-    color: #7BB899;
-  }
-
   .custom-select__item[aria-selected=true]:hover,
   .custom-select__item[aria-selected=true]:focus {
     background-color: rgba(255, 255, 255, 0.2);
@@ -3636,6 +3637,7 @@ button,
     border: 0;
     outline: 0;
     background-color: rgba(255, 255, 255, 0);
+    color: #1F2020;
   }
 
   .modal--mob-menu {

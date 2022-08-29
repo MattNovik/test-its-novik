@@ -25,12 +25,10 @@
       user-select: none;
       -webkit-tap-highlight-color: $color-transparent;
 
-      @media (hover: hover), screen and (min-width: 0\0) {
         &:hover,
         &:focus-visible {
           color: $color-padua;
         }
-      }
 
       &::before {
         content: "";
@@ -61,12 +59,10 @@
     input:checked + label {
       color: $color-default-black;
 
-      @media (hover: hover), screen and (min-width: 0\0) {
         &:hover,
         &:focus-visible {
           color: $color-padua;
         }
-      }
 
       &::before {
         background-color: $color-padua;

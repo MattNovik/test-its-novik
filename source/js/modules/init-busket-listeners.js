@@ -8,6 +8,19 @@ const busketClear = document.querySelector(".busket__clear");
 const busketItemAdd = document.querySelectorAll(".busket__add");
 const busketItemDecrease = document.querySelectorAll(".busket__delete");
 
+const nameProductsCountList = [
+  "товаров",
+  "товар",
+  "товара",
+  "товара",
+  "товара",
+  "товаров",
+  "товаров",
+  "товаров",
+  "товаров",
+  "товаров",
+];
+
 const clearBusket = () => {
   const busketItemList = document.querySelectorAll(".busket__item");
   Array.from(busketItemList).map((item) => {
@@ -16,6 +29,7 @@ const clearBusket = () => {
   document.querySelector(".busket__products-count").textContent = "0";
   document.querySelector(".busket__summ-count").textContent = 0;
   document.querySelector(".header__busket-number").textContent = 0;
+  document.querySelector(".busket__product-count-name").textContent = "товаров";
 };
 
 const itemsListeners = (parent, list) => {
@@ -71,6 +85,14 @@ const itemsListeners = (parent, list) => {
           .textContent.replace(/[^0-9]/g, "") +
         +itemData.price.replace(/[^0-9]/g, "")
       ).toLocaleString("ru");
+
+      const nameProductsCount = +document.querySelector(
+        ".busket__products-count"
+      ).textContent[
+        document.querySelector(".busket__products-count").textContent.length - 1
+      ];
+      document.querySelector(".busket__product-count-name").textContent =
+        nameProductsCountList[nameProductsCount];
     });
   });
 };

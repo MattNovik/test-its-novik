@@ -2,6 +2,7 @@ import { createItem } from "../utils/create-item";
 import { gatherFormData, createFormData } from "../utils/gather-form-data";
 import { filterSort } from "../utils/filter-sort";
 import { itemsListeners } from "./init-busket-listeners";
+import { modals } from "./modals/init-modals";
 
 const busketList = document.querySelector(".busket__list");
 const filterForm = document.querySelector(".filters__wrapper");
@@ -16,6 +17,7 @@ const initFilterSort = () => {
 
   Array.from(sortButtons).map((item) => {
     item.addEventListener("click", (e) => {
+      modals.close("modal-sort");
       Array.from(sortButtons).map((i) => {
         i.classList.remove("active");
       });

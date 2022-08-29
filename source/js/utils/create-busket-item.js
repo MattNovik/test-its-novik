@@ -2,9 +2,12 @@ const createBusketItem = (item) => {
   const newElem = document.createElement("li");
   newElem.classList.add("busket__item");
   newElem.setAttribute("id", item.id);
+  const newWrapperPicText = document.createElement("div");
+  newWrapperPicText.classList.add("busket__wrapper-pic-text");
+  newElem.appendChild(newWrapperPicText);
   const newPicture = document.createElement("picture");
   newPicture.classList.add("busket__item-img");
-  newElem.appendChild(newPicture);
+  newWrapperPicText.appendChild(newPicture);
   const newSource = document.createElement("source");
   newSource.setAttribute("type", "image/webp");
   newSource.setAttribute(
@@ -55,7 +58,7 @@ const createBusketItem = (item) => {
   newPicture.appendChild(newImg);
   const newNamePrice = document.createElement("div");
   newNamePrice.classList.add("busket__name-price");
-  newElem.appendChild(newNamePrice);
+  newWrapperPicText.appendChild(newNamePrice);
   const newElemName = document.createElement("span");
   newElemName.classList.add("busket__product-name");
   newElemName.textContent = item.name;

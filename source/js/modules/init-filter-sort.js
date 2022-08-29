@@ -19,6 +19,7 @@ const initFilterSort = () => {
       Array.from(sortButtons).map((i) => {
         i.classList.remove("active");
       });
+      document.querySelector(".sorts span").textContent = e.target.textContent;
       e.target.classList.add("active");
       filterFormData = [];
       productsData = [];

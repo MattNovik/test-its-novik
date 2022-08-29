@@ -66,6 +66,7 @@
 
   &__toggle {
     display: none;
+    -webkit-appearance: none;
 
     @include vp-1023 {
       width: 24px;
@@ -120,5 +121,10 @@
     background-color: $color-transparent;
     outline: 0;
     cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

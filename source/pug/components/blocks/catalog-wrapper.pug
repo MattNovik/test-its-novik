@@ -17,18 +17,18 @@ mixin catalogWrapper()
             })
       .catalog-header
         span.catalog-header__products-count 412 товаров
-        button.sorts(type="button" data-open-modal="modal-sort")
+        button.sorts(type="button" data-open-modal="modal-sort" tabindex=0)
           span Сначала дорогие
           +icon('icon-small-arrow',12,10)
       .catalog
         ul.catalog__list
           each item in productsData
             li.catalog__item
-              form.catalog__item-form
+              form.catalog__item-form(tabindex=0)
                 +picture(item.imgPath, item.imgName,item.imgType,item.imgWidth,item.imgHeight, item.imgAlt).catalog__item-img
                 p.catalog__item-name!=item.itemName
                 span.catalog__item-price #{item.itemPrice} ₽
-                button.catalog__add-item(type="submit" aria-label="добавить товар")
+                button.catalog__add-item(type="submit" aria-label="добавить товар" tabindex=0)
                   +icon('icon-plus',22,22)
                 input(type="hidden" name="picturePath" value=item.imgPath)
                 input(type="hidden" name="pictureName" value=item.imgName)

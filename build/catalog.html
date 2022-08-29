@@ -5,7 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="ProjectName — описание">
+    <meta name="description" content="ProjectName — описание"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -168,6 +174,15 @@
                   <p class="slider__text">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</p>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <picture class="slider__picture">
+                  <source type="image/webp" srcset="img/slides/main-slider.webp, img/slides/main-slider@2x.webp 2x"><img src="img/slides/main-slider.jpg" srcset="img/slides/main-slider@2x.jpg 2x" width="100" height="100" alt="first-slide">
+                </picture>
+                <div class="slider__info-wrapper">
+                  <h1 class="slider__name">Краски</h1>
+                  <p class="slider__text">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="swiper-button-prev">
@@ -190,33 +205,33 @@
               <form class="filters__wrapper">
                 <button class="custom-toggle custom-toggle--tab" type="submit">
                   <input class="visually-hidden" type="checkbox" id="new" name="new" value="new">
-                  <label for="new">Новинки
+                  <label for="new" tabindex="0">Новинки
                   </label>
                 </button>
                 <button class="custom-toggle custom-toggle--tab" type="submit">
                   <input class="visually-hidden" type="checkbox" id="have" name="have" value="have">
-                  <label for="have">Есть в наличии
+                  <label for="have" tabindex="0">Есть в наличии
                   </label>
                 </button>
                 <button class="custom-toggle custom-toggle--tab" type="submit">
                   <input class="visually-hidden" type="checkbox" id="cont" name="cont" value="cont">
-                  <label for="cont">Контрактные
+                  <label for="cont" tabindex="0">Контрактные
                   </label>
                 </button>
                 <button class="custom-toggle custom-toggle--tab" type="submit">
                   <input class="visually-hidden" type="checkbox" id="ex" name="ex" value="ex">
-                  <label for="ex">Эксклюзивные
+                  <label for="ex" tabindex="0">Эксклюзивные
                   </label>
                 </button>
                 <button class="custom-toggle custom-toggle--tab" type="submit">
                   <input class="visually-hidden" type="checkbox" id="sale" name="sale" value="sale">
-                  <label for="sale">Распродажа
+                  <label for="sale" tabindex="0">Распродажа
                   </label>
                 </button>
               </form>
             </div>
             <div class="catalog-header"><span class="catalog-header__products-count">412 товаров</span>
-              <button class="sorts" type="button" data-open-modal="modal-sort"><span>Сначала дорогие</span>
+              <button class="sorts" type="button" data-open-modal="modal-sort" tabindex="0"><span>Сначала дорогие</span>
                 <svg width="12" height="10" aria-hidden="true">
                   <use xlink:href="#icon-small-arrow"></use>
                 </svg>
@@ -225,12 +240,12 @@
             <div class="catalog">
               <ul class="catalog__list">
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6 250 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -248,12 +263,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">10 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -271,12 +286,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">420 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -294,12 +309,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">624 000 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -317,12 +332,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">640 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -340,12 +355,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">62 340 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -363,12 +378,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">610 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -386,12 +401,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">200 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -409,12 +424,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">4 200 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -432,12 +447,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6 530 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -455,12 +470,12 @@
                   </form>
                 </li>
                 <li class="catalog__item">
-                  <form class="catalog__item-form">
+                  <form class="catalog__item-form" tabindex="0">
                     <picture class="catalog__item-img">
                       <source type="image/webp" srcset="img/content/product-first-catalog.webp, img/content/product-first-catalog@2x.webp 2x"><img src="img/content/product-first-catalog.jpg" srcset="img/content/product-first-catalog@2x.jpg 2x" width="278" height="278" alt="first-product">
                     </picture>
                     <p class="catalog__item-name">Краска Wallquest, Brownsone MS90102</p><span class="catalog__item-price">6 000 ₽</span>
-                    <button class="catalog__add-item" type="submit" aria-label="добавить товар">
+                    <button class="catalog__add-item" type="submit" aria-label="добавить товар" tabindex="0">
                       <svg width="22" height="22" aria-hidden="true">
                         <use xlink:href="#icon-plus"></use>
                       </svg>
@@ -546,27 +561,27 @@
             <div class="filters__wrapper">
               <button class="custom-toggle custom-toggle--tab" type="submit">
                 <input class="visually-hidden" type="checkbox" id="new" name="new" value="new" checked>
-                <label for="new">Новинки
+                <label for="new" tabindex="0">Новинки
                 </label>
               </button>
               <button class="custom-toggle custom-toggle--tab" type="submit">
                 <input class="visually-hidden" type="checkbox" id="have" name="have" value="have">
-                <label for="have">Есть в наличии
+                <label for="have" tabindex="0">Есть в наличии
                 </label>
               </button>
               <button class="custom-toggle custom-toggle--tab" type="submit">
                 <input class="visually-hidden" type="checkbox" id="cont" name="cont" value="cont">
-                <label for="cont">Контрактные
+                <label for="cont" tabindex="0">Контрактные
                 </label>
               </button>
               <button class="custom-toggle custom-toggle--tab" type="submit">
                 <input class="visually-hidden" type="checkbox" id="ex" name="ex" value="ex">
-                <label for="ex">Эксклюзивные
+                <label for="ex" tabindex="0">Эксклюзивные
                 </label>
               </button>
               <button class="custom-toggle custom-toggle--tab" type="submit">
                 <input class="visually-hidden" type="checkbox" id="sale" name="sale" value="sale">
-                <label for="sale">Распродажа
+                <label for="sale" tabindex="0">Распродажа
                 </label>
               </button>
             </div>
@@ -586,16 +601,16 @@
           <div class="sort-wrapper">
             <ul class="sort-wrapper__list">
               <li class="sort-wrapper__item">
-                <button class="sort-wrapper__button" type="button" value="expen">Сначала дорогие</button>
+                <button class="sort-wrapper__button" type="button" value="expen" tabindex="0">Сначала дорогие</button>
               </li>
               <li class="sort-wrapper__item">
-                <button class="sort-wrapper__button" type="button" value="notexpen">Сначала недорогие</button>
+                <button class="sort-wrapper__button" type="button" value="notexpen" tabindex="0">Сначала недорогие</button>
               </li>
               <li class="sort-wrapper__item">
-                <button class="sort-wrapper__button" type="button" value="popular">Сначала популярные</button>
+                <button class="sort-wrapper__button" type="button" value="popular" tabindex="0">Сначала популярные</button>
               </li>
               <li class="sort-wrapper__item">
-                <button class="sort-wrapper__button" type="button" value="new">Сначала новые</button>
+                <button class="sort-wrapper__button" type="button" value="new" tabindex="0">Сначала новые</button>
               </li>
             </ul>
           </div>

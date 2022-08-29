@@ -1,48 +1,48 @@
 mixin modal-mob-filter()
   .filter
-    .filters__wrapper
+    form.filters__wrapper
       +custom-toggle({
         typeClass: "tab",
         type: "checkbox",
-        typeFor: "new",
+        typeFor: "newMob",
         text: "Новинки",
-        name: "new",
+        name: "newMob",
         value: "new",
-        checked: true
+        checked: false
       })
       +custom-toggle({
         typeClass: "tab",
         type: "checkbox",
-        typeFor: "have",
+        typeFor: "haveMob",
         text: "Есть в наличии",
-        name: "have",
+        name: "havMobe",
         value: "have",
         checked: false
       })
       +custom-toggle({
         typeClass: "tab",
         type: "checkbox",
-        typeFor: "cont",
+        typeFor: "contMob",
         text: "Контрактные",
-        name: "cont",
+        name: "contMob",
         value: "cont",
         checked: false
       })
       +custom-toggle({
         typeClass: "tab",
         type: "checkbox",
-        typeFor: "ex",
+        typeFor: "exMob",
         text: "Эксклюзивные",
-        name: "ex",
+        name: "exMob",
         value: "ex",
         checked: false
       })
       +custom-toggle({
         typeClass: "tab",
         type: "checkbox",
-        typeFor: "sale",
+        typeFor: "saleMob",
         text: "Распродажа",
-        name: "sale",
+        name: "saleMob",
         value: "sale",
         checked: false
       })

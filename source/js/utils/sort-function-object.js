@@ -1,9 +1,9 @@
 const sortFunctions = {
   expen(a, b) {
-    return +b.price - +a.price;
+    return +b.price.replace(/[^0-9]/g, "") - +a.price.replace(/[^0-9]/g, "");
   },
   notexpen(a, b) {
-    return +a.price - +b.price;
+    return +a.price.replace(/[^0-9]/g, "") - +b.price.replace(/[^0-9]/g, "");
   },
   popular(a, b) {
     return +b.popular - +a.popular;

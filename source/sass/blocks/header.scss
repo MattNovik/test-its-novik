@@ -139,6 +139,7 @@
     transition: all $trans-default;
     border: solid 1px $color-transparent;
     -webkit-appearance: none;
+    color: $color-swamp;
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
@@ -159,5 +160,6 @@
     line-height: 15px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: $color-swamp;
   }
 }

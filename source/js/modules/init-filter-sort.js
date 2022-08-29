@@ -14,7 +14,7 @@ const initFilterSort = () => {
   const productsList = document.querySelectorAll(".catalog__item-form");
   let productsData = [];
   let filterFormData = [];
-  let sortValue = "";
+  let sortValue = "expen";
   let desctopForm = filterForms[0];
   let mobForm = filterForms[1];
 

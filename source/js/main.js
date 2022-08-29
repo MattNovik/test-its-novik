@@ -5,6 +5,7 @@ import { initFormValidate } from "./modules/form/init-form-validate";
 import { initSliderMain } from "./modules/init-slider";
 import { initSortBox } from "./modules/init-sort-box";
 import { initFilterSort } from "./modules/init-filter-sort";
+import { busketListeners } from "./modules/init-busket-listeners";
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener("load", () => {
+    busketListeners();
     initFilterSort();
     initSortBox();
     initSliderMain();

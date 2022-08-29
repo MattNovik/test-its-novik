@@ -105,7 +105,7 @@ module.exports = {
       "error",
       2,
       {
-        SwitchCase: 1,
+        SwitchCase: 1.5,
         // continuation indent
         VariableDeclarator: 1, // indent is multiplier * indent = 1 * 2
         MemberExpression: 2, // indent is multiplier * indent = 2 * 2
@@ -132,7 +132,7 @@ module.exports = {
     "no-multiple-empty-lines": ["error", { max: 2 }],
     "no-new-object": "error",
     "no-trailing-spaces": "error",
-    "object-curly-spacing": "error",
+    "object-curly-spacing": ["error", "always"],
     "one-var": [
       "error",
       {
@@ -185,6 +185,6 @@ module.exports = {
         functions: "never",
       },
     ],
-    quotes: ["error", "single"],
+    quotes: ["error", "double"],
   },
 };

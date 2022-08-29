@@ -49,6 +49,7 @@
     top: auto;
     transition: opacity $trans-default;
     z-index: 8;
+    transition: all $trans-default;
 
     &:after {
       content: none;
@@ -56,6 +57,13 @@
 
     @include vp-1023 {
       display: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        transform: scale(1.2);
+      }
     }
 
     svg {

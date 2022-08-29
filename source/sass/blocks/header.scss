@@ -88,6 +88,15 @@
     letter-spacing: -0.02em;
     color: #1F2020;
     white-space: nowrap;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        opacity: .8;
+        color: $color-padua;
+      }
+    }
   }
 
   &__tel-button {
@@ -103,6 +112,14 @@
     color: #1F2020;
     opacity: 0.3;
     cursor: pointer;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+    }
   }
 
   &__busket-opener {
@@ -119,6 +136,16 @@
     background-color: $color-padua;
     cursor: pointer;
     border-radius: 50%;
+    transition: all $trans-default;
+    border: solid 1px $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        background-color: $color-default-white;
+        border: solid 1px $color-swamp;
+      }
+    }
 
     @include vp-1023 {
       order: 2;

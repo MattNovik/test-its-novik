@@ -23,9 +23,11 @@
   }
 
   &__wrapper-list {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    overflow: hidden;
   }
 
   &__wrapper-list-header {
@@ -34,11 +36,22 @@
     margin: 0 0 10px;
   }
 
+  &__wrapper-count {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 5px;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 112%;
+    color: $color-swamp;
+  }
+
   &__products-count {
     font-weight: 400;
     font-size: 14px;
     line-height: 112%;
-    color: #1F2020;
+    color: $color-swamp;
   }
 
   &__clear {
@@ -50,8 +63,16 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 112%;
-    color: #1F2020;
+    color: $color-swamp;
     opacity: 0.4;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+    }
   }
 
   &__list {
@@ -59,9 +80,10 @@
     flex-direction: column;
     flex-grow: 1;
     margin: 0;
-    padding: 0;
+    padding: 0 0 40px;
     list-style-type: none;
     row-gap: 12px;
+    overflow-y: auto;
   }
 
   &__item {
@@ -91,6 +113,7 @@
   }
 
   &__item-img {
+    width: 96px;
     min-width: 96px;
     height: 96px;
     margin: 0 8px 0 0;
@@ -121,23 +144,24 @@
     font-size: 16px;
     line-height: 112%;
     letter-spacing: 0.02em;
-    color: #1F2020;
+    color: $color-swamp;
   }
 
   &__price {
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
-     color: #1F2020;
+     color: $color-swamp;
   }
 
   &__counter {
+    width: 128px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 21px;
 
     @include vp-767 {
-      justify-content: center;
+      justify-self: center;
       grid-area: add;
     }
   }
@@ -153,13 +177,28 @@
     background-color: $color-white-smoke;
     border-radius: 4px;
     cursor: pointer;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        background-color: $color-padua;
+      }
+    }
+  }
+
+  &__add {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &__product-count {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    color: #1F2020;
+    color: $color-swamp;
   }
 
   &__delete-item,
@@ -176,9 +215,23 @@
     padding: 0;
     color: $color-swamp;
     opacity: 0.2;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+    }
 
     @include vp-767 {
       grid-area: close;
+    }
+  }
+
+  &__delete-item {
+    svg {
+      fill: currentColor;
     }
   }
 
@@ -192,6 +245,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    padding: 15px 0 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-default-white;
 
     @include vp-767 {
       flex-direction: column;
@@ -201,8 +259,10 @@
   }
 
   &__wrapper-summ {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+    'total total'
+    'summ name';
     row-gap: 6px;
   }
 
@@ -211,6 +271,7 @@
     font-size: 16px;
     line-height: 100%;
     color: $color-swamp;
+    grid-area: total;
   }
 
   &__summ-count {
@@ -219,15 +280,28 @@
     line-height: 100%;
     letter-spacing: -0.02em;
     color: $color-swamp;
+    grid-area: summ;
+  }
+
+  &__summ-count-name {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $color-swamp;
+    grid-area: name;
+    margin: 0 0 0 -1px;
   }
 
   &__buy-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: max-content;
     min-width: 240px;
     padding: 20px 40px 21px;
-    border: 0;
+    border: solid 1px $color-transparent;
     outline: 0;
     background-color: $color-padua;
     border-radius: 4px;
@@ -238,6 +312,15 @@
     text-transform: uppercase;
     color: $color-swamp;
     cursor: pointer;
+    transition: all $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-visible {
+        background-color: $color-default-white;
+        border: solid 1px $color-swamp;
+      }
+    }
 
     @include vp-767 {
       width: 100%;
@@ -272,6 +355,19 @@
       background-color: $color-transparent;
       outline: 0;
       cursor: pointer;
+      transition: all $trans-default;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus-visible {
+          background-color: $color-padua;
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
 
       @include vp-767 {
         top: 12px;

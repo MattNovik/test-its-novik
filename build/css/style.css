@@ -3965,6 +3965,7 @@ button,
 
   .sort-wrapper__button {
     border-radius: 6px;
+    width: 100%;
   }
 
   .modal--sort .modal__close-btn {

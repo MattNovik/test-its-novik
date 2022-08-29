@@ -8,17 +8,17 @@ const initFilterSort = () => {
   let filterFormData = [];
   let sortValue = "";
   const sortFunctions = {
-    expen: (a, b) => {
-      b.price - a.price;
+    expen: function (a, b) {
+      return +b.price - +a.price;
     },
-    notexpen: (a, b) => {
-      a.price - b.price;
+    notexpen: function (a, b) {
+      return +a.price - +b.price;
     },
-    popular: (a, b) => {
-      a.popular - b.popular;
+    popular: function (a, b) {
+      return +a.popular - +b.popular;
     },
-    new: (a, b) => {
-      a.date - b.date;
+    new: function (a, b) {
+      return new Date(a.date).getTime() - new Date(b.date).getTime();
     },
   };
 
@@ -41,6 +41,8 @@ const initFilterSort = () => {
           name: formData.get("name"),
           price: formData.get("price"),
           type: formData.get("type"),
+          date: formData.get("date"),
+          popular: formData.get("popular"),
         };
         productsData.push(itemList);
       });
@@ -156,6 +158,14 @@ const initFilterSort = () => {
         newInputType.setAttribute("type", "hidden");
         newInputType.setAttribute("value", item.type);
         newForm.appendChild(newInputType);
+        const newInputDate = document.createElement("input");
+        newInputDate.setAttribute("type", "hidden");
+        newInputDate.setAttribute("value", item.date);
+        newForm.appendChild(newInputDate);
+        const newInputPopular = document.createElement("input");
+        newInputPopular.setAttribute("type", "hidden");
+        newInputPopular.setAttribute("value", item.popular);
+        newForm.appendChild(newInputPopular);
         /* p.catalog__item-name!=item.itemName
                 span.catalog__item-price #{item.itemPrice} ₽
                 button.catalog__add-item(type="submit" aria-label="добавить товар")
@@ -301,6 +311,14 @@ const initFilterSort = () => {
       newInputType.setAttribute("type", "hidden");
       newInputType.setAttribute("value", item.type);
       newForm.appendChild(newInputType);
+      const newInputDate = document.createElement("input");
+      newInputDate.setAttribute("type", "hidden");
+      newInputDate.setAttribute("value", item.date);
+      newForm.appendChild(newInputDate);
+      const newInputPopular = document.createElement("input");
+      newInputPopular.setAttribute("type", "hidden");
+      newInputPopular.setAttribute("value", item.popular);
+      newForm.appendChild(newInputPopular);
       /* p.catalog__item-name!=item.itemName
                 span.catalog__item-price #{item.itemPrice} ₽
                 button.catalog__add-item(type="submit" aria-label="добавить товар")

@@ -15,8 +15,10 @@ const initFilterSort = () => {
   let productsData = [];
   let filterFormData = [];
   let sortValue = "expen";
-  let desctopForm = filterForms[0];
-  let mobForm = filterForms[1];
+  const desctopForm = document.querySelector(".filters .filters__wrapper");
+  const mobForm = document.querySelector(
+    ".modal--mob-filter .filters__wrapper"
+  );
 
   Array.from(sortButtons).map((item) => {
     item.addEventListener("click", (e) => {
